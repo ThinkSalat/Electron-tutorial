@@ -65,6 +65,17 @@ function createWindow () {
           click () { require('electron').shell.openExternal('https://electronjs.org'); }
         }
       ]
+    },
+    {
+      label: "Developer",
+      submenu: [
+        {
+          label: "Toggle Developer Tools",
+          click() {
+            mainWindow.webContents.toggleDevTools();
+          }
+        }
+      ]
     }
   ];
   
